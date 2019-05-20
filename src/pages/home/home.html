@@ -1,14 +1,31 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      FakeChatRoom
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-list-header>Choose a category</ion-list-header>
+  
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select placeholder="Select one">
+        <ion-option value="c">Cinema</ion-option>
+        <ion-option value="s">Sports</ion-option>
+        <ion-option value="m">Miscelaneous</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Your name</ion-label>
+      <ion-input type="text" [(ngModel)]="session.name"></ion-input>
+    </ion-item>
+    </ion-list>
+  <ion-fab end bottom>
+    <button ion-fab color="primary" (click)=onBtClick()>
+    <ion-icon name="enter"></ion-icon>
+    </button>
+    </ion-fab>
 </ion-content>

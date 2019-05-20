@@ -1,3 +1,4 @@
+import { SessionService } from './session.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -6,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    SessionService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
